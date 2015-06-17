@@ -1,0 +1,23 @@
+TEMPLATE = lib
+CONFIG -= qt
+CONFIG += staticlib
+QMAKE_CXXFLAGS -= -O
+QMAKE_CXXFLAGS -= -O1
+QMAKE_CXXFLAGS -= -O2
+QMAKE_CXXFLAGS *= -O3
+QMAKE_CFLAGS -= -O
+QMAKE_CFLAGS -= -O1
+QMAKE_CFLAGS -= -O2
+QMAKE_CFLAGS *= -O3
+
+QT      -= core gui
+TARGET = triangle
+CONFIG += warn_off
+DEFINES += LINUX TRILIBRARY
+
+SOURCES += \
+    triangle.c
+
+HEADERS += \
+    triangle.h
+
